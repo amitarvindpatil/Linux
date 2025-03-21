@@ -11,7 +11,6 @@
 ##### 8.8.8.8 -> argument
 
 ## Getting Help,Man Pages (man,type,help.apropos)
-
 ===================================================
 | command | example     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -26,9 +25,8 @@
 ###### built-in such as cd,aliasa
 
 ## Keyboard Shortcuts
-
 ===================================================
-| command | example     |
+| command | Description     |
 | :-------- | :------- | 
 | `TAB` | autocompletes the command or the filename if its unique
 | `TAB TAB (press twice)` | displays all commands or filenames that start with those letters
@@ -41,3 +39,30 @@
 | `CTRL + Z` |  sleeping a the running program
 | `CTRL + ALT + T` |  opening a terminal 
 
+## Bash History
+===================================================
+| command | Description     |
+| :-------- | :------- | 
+| `history` | showing the history
+| `history -d 100` | removing a line (ex: 100) from the history
+| `history -c` | removing the entire history
+| `echo $HISTFILESIZE` | printing the no. of commands saved in the history file (~/.bash_history)
+| `echo $HISTSIZE` |  printing the no. of history commands saved in the memory
+| `!!` |  rerunning the last command from the history
+| `!20` |  running  a specific command from the history (ex: the 20th command)
+| `!-10` |   running the last nth (10th) command from the history
+| `!abc` |  running the last command starting with abc
+| `!abc:p` |  printing the last command starting with abc
+| `CTRL + R` |  reverse searching into the history 
+| `HISTTIMEFORMAT="%d/%m/%y %T"` |  recording the date and time of each command in the history
+| `echo "HISTTIMEFORMAT=\"%d/%m/%y %T\"" >> ~/.bashrc` |   making it persistent after reboot
+
+## Running commands as root (sudo, su)
+===================================================
+| command | Description     |
+| :-------- | :------- | 
+| `sudo` | running a command as root (only users that belong to sudo group [Ubuntu] or wheel [CentOS])
+| `sudo su` | becoming root temporarily in the terminal and enter the user's password
+| `sudo passwd root` | setting the root password
+| `passwd username` | changing a user's password
+| `su` | becoming root temporarily in the terminal and enter the root passwords
