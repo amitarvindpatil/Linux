@@ -44,8 +44,7 @@
 |SUID (Set User ID)|
 |displaying the SUID permission|
 |`ls -l /usr/bin/umount`| -rwsr-xr-x 1 root root 39144 apr  2 18:29 /usr/bin/umount
-|`stat /usr/bin/umount`
-| File: /usr/bin/umount
+|`stat /usr/bin/umount` | File: /usr/bin/umount
     Size: 39144     	Blocks: 80         IO Block: 4096   regular file
     Device: 805h/2053d	Inode: 918756      Links: 1
     Access: (4755/-rwsr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
@@ -59,8 +58,7 @@
  | SGID (Set Group ID)| 
  | displaying the SGID permission|
  | `ls -ld projects/` | drwxr-s--- 2 student student 4096 aug 25 11:02 projects/
- | `stat projects/`
- | File: projects/
+ | `stat projects/` | File: projects/
     Size: 4096      	Blocks: 8          IO Block: 4096   directory
     Device: 805h/2053d	Inode: 266193      Links: 2
     Access: (2750/drwxr-s---)  Uid: ( 1001/ student)   Gid: ( 1002/ student)
@@ -74,8 +72,7 @@
 |The Sticky Bit |
 |displaying the sticky bit permission|
 |`ls -ld /tmp/`| drwxrwxrwt 20 root root 4096 aug 25 10:49 /tmp/
-|`stat /tmp/`|
-|   File: /tmp/
+|`stat /tmp/`|   File: /tmp/
     Size: 4096      	Blocks: 8          IO Block: 4096   directory
     Device: 805h/2053d	Inode: 786434      Links: 20
     Access: (1777/drwxrwxrwt)  Uid: (    0/    root)   Gid: (    0/    root)
