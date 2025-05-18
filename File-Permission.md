@@ -21,7 +21,8 @@
     Access: 2020-08-24 11:31:49.506277118 +0300
     Modify: 2020-08-22 14:43:36.326651384 +0300
     Change: 2020-08-22 14:43:36.342652202 +0300
-    Birth: -
+    Birth: -|
+
 |changing the permissions using the relative (symbolic) mode
 |chmod u+r filename
 |chmod u+r,g-wx,o-rwx filename
@@ -51,7 +52,7 @@
     Access: 2020-08-22 14:35:46.763999798 +0300
     Modify: 2020-04-02 18:29:40.000000000 +0300
     Change: 2020-06-30 18:27:32.851134521 +0300
-    Birth: -
+    Birth: -|
  |setting SUID|
  |`chmod u+s executable_file`|
  |`chmod 4XXX executable_file`|Ex: chmod 4755 script.sh
@@ -66,7 +67,7 @@
     Access: 2020-08-25 11:02:15.013355559 +0300
     Modify: 2020-08-25 11:02:15.013355559 +0300
     Change: 2020-08-25 11:02:19.157290764 +0300
-    Birth: -
+    Birth: -|
 | setting SGID|
 |`chmod 2750 projects/`|
 |`chmod g+s projects/`|
@@ -81,7 +82,7 @@
     Access: 2020-08-22 14:46:03.259455125 +0300
     Modify: 2020-08-25 10:49:53.756211470 +0300
     Change: 2020-08-25 10:49:53.756211470 +0300
-    Birth: -
+    Birth: -|
 |setting the sticky bit|
 | mkdir temp |
 | chmod 1777 temp/|
