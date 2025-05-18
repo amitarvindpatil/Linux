@@ -128,8 +128,8 @@
 | `tail -n 10 /var/log/*.log > output.txt 2> errors.txt`|
 | redirecting both the output and errors to the same file |
 | `tail -n 2 /etc/passwd /etc/shadow > output_errors.txt 2>&1` |
-| `cat -n /var/log/auth.log | grep -ai "authentication failure" | wc -l` |
-| `cat -n /var/log/auth.log | grep -ai "authentication failure" > auth.txt` | piping and redirection
+ `cat -n /var/log/auth.log | grep -ai "authentication failure" | wc -l` 
+ `cat -n /var/log/auth.log | grep -ai "authentication failure" > auth.txt` | piping and redirection
 
 
 ## Finding Files (find, plocate)
