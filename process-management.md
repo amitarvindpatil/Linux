@@ -16,9 +16,11 @@
 |`ps`| displaying all processes started in the current terminal
 |`ps -ef` | displaying all processes running in the system
 |`ps aux` |
-|piping to less|
-`ps aux|less`
-| sorting by memory and piping to less|
 
+### piping to less
+`ps aux|less`
+
+### sorting by memory and piping to less
 `ps aux --sort=%mem|less`
+
 `ps -ef|grep sshd`
