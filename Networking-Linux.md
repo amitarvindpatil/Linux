@@ -108,16 +108,16 @@ Example:
 |`sudo systemctl is-enabled ssh `| Ubuntu
 |`sudo systemctl is-enabled sshd`|CentOS
 |Securing the SSHd daemon|
-|`Port 2278`|Change the port
-|`PermitRootLogin no`|Disable direct root login
-|`AllowUsers stud u1 u2 john`|Limit Users’ SSH access
-|`iptables`|Filter SSH access at the firewall level
-|Activate Public Key Authentication and Disable Password Authentication
-|Use only SSH Protocol version 2
-| Other configurations:|
-|`ClientAliveInterval 300
-ClientAliveCountMax 0
-MaxAuthTries 2
-MaxStartUps 3
-LoginGraceTime 20`|
+|1. `Port 2278`|Change the port
+|2. `PermitRootLogin no`|Disable direct root login
+|3. `AllowUsers stud u1 u2 john`|Limit Users’ SSH access
+|4. `iptables`|Filter SSH access at the firewall level
+|5. Activate Public Key Authentication and Disable Password Authentication
+|6. Use only SSH Protocol version 2
+|7. Other configurations:|
+|"ClientAliveInterval 300"|
+|"ClientAliveCountMax 0"|
+|"MaxAuthTries 2"|
+|"MaxStartUps 3"|
+|"LoginGraceTime 20"|
 
