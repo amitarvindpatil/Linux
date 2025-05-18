@@ -13,8 +13,7 @@
 |- = no access
 |displaying the permissions (ls and stat)|
 |`ls -l /etc/passwd`| output - -rw-r--r-- 1 root root 2871 aug 22 14:43 /etc/passwd 
-|`stat /etc/shadow`
-|    File: /etc/shadow
+|`stat /etc/shadow`|    File: /etc/shadow
     Size: 1721      	Blocks: 8          IO Block: 4096   regular file
     Device: 805h/2053d	Inode: 524451      Links: 1
     Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (   42/  shadow)
