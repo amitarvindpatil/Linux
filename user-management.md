@@ -16,7 +16,10 @@
 | `-g` | specify the primary group (must exist)
 |Exemple:|
 | `useradd -m -d /home/john -c "C++ Developer" -s /bin/bash -G sudo,adm,mail john` |
-|changing a user account|
+
+## changing a user account
+| command | Description  |
+| :-------- | :------- | 
 |`usermod [OPTIONS] username`| uses the same options as useradd
 |Example:|
 |`usermod -aG developers,managers john` | adding the user to two secondary groups
@@ -25,9 +28,14 @@
 | `groupdel group_name` | deleting a group
 | `cat /etc/groups` | displaying all groups
 |`groups`|displaying the groups a user belongs to groups
-|creating admin users|
+## creating admin users
+| command | Description     |
+| :-------- | :------- | 
 | `usermod -aG sudo john` | add the user to sudo group in Ubuntu and wheel group in CentOS
-|Monitoring Users|
+
+## Monitoring Users
+| command | Description     |
+| :-------- | :------- | 
 |`who -H` | displays logged in users
 |`id` | displays the current user and its groups
 |`whoami` | displays EUID

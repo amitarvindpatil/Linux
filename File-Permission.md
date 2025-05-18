@@ -11,7 +11,9 @@
 |w = write
 |x = execute
 |- = no access
-|displaying the permissions (ls and stat)|
+## displaying the permissions (ls and stat)
+| command | Description     |
+| :-------- | :------- | 
 |`ls -l /etc/passwd`| output - -rw-r--r-- 1 root root 2871 aug 22 14:43 /etc/passwd 
 |`stat /etc/shadow`|  
 |changing the permissions using the relative (symbolic) mode
@@ -32,7 +34,10 @@
 | rw- r-- ---   |  chmod 640 filename
 |`chmod --reference=file1 file2`| setting the permissions as of a reference file
 |`chmod -R u+rw,o-rwx filename`| changing permissions recursively
-|SUID (Set User ID)|
+
+## SUID (Set User ID)
+| command | Description     |
+| :-------- | :------- | 
 |displaying the SUID permission|
 |`ls -l /usr/bin/umount`| -rwsr-xr-x 1 root root 39144 apr  2 18:29 /usr/bin/umount
 |`stat /usr/bin/umount` | 
@@ -46,7 +51,10 @@
 | setting SGID|
 |`chmod 2750 projects/`|
 |`chmod g+s projects/`|
-|The Sticky Bit |
+
+## The Sticky Bit 
+| command | Description     |
+| :-------- | :------- | 
 |displaying the sticky bit permission|
 |`ls -ld /tmp/`| drwxrwxrwt 20 root root 4096 aug 25 10:49 /tmp/
 |`stat /tmp/`|  
@@ -55,7 +63,10 @@
 | chmod 1777 temp/|
 | chmod o+t temp/ |
 | ls -ld temp/    | drwxrwxrwt 2 student student 4096 aug 25 11:04 temp/
-|UMASK|
+
+## UMASK
+| command | Description     |
+| :-------- | :------- | 
 |`umask `| displaying the UMASK
 |`umask new_value` `Ex: umask 0022` | setting a new umask value
 | Changing File Ownership (root only)|
