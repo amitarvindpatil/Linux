@@ -109,3 +109,24 @@
 | `rm -rf dir1/` | removing a directory without prompting
 | `rm -ri fil1 dir1/` | removing a file and a directory prompting the user for confirmation
 | `shred -vu -n 100 file1` | secure removal of a file (verbose with 100 rounds of overwriting)
+
+## Piping and Command Redirection
+
+Piping Examples:
+==================================================
+| command | Description     |
+| :-------- | :------- | 
+| `ls -lSh /etc/ | head` |  see the first 10 files by size
+| `ps -ef | grep sshd` | checking if sshd is running
+| Command Redirection  |
+|  output redirection  |    
+| `ps aux > running_processes.txt` |
+| `who -H > loggedin_users.txt`    |
+| appending to a file  |
+| `id >> loggedin_users.txt` |
+| output and error redirection |
+| `tail -n 10 /var/log/*.log > output.txt 2> errors.txt`|
+| redirecting both the output and errors to the same file |
+| `tail -n 2 /etc/passwd /etc/shadow > output_errors.txt 2>&1` |
+| `cat -n /var/log/auth.log | grep -ai "authentication failure" | wc -l` |
+| `cat -n /var/log/auth.log | grep -ai "authentication failure" > auth.txt` | piping and redirection
