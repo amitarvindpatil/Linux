@@ -112,7 +112,7 @@
 
 ## Piping and Command Redirection
 
-Piping Examples:
+### Piping Examples:
 ==================================================
 | command | Description     |
 | :-------- | :------- | 
@@ -130,3 +130,89 @@ Piping Examples:
 | `tail -n 2 /etc/passwd /etc/shadow > output_errors.txt 2>&1` |
 | `cat -n /var/log/auth.log | grep -ai "authentication failure" | wc -l` |
 | `cat -n /var/log/auth.log | grep -ai "authentication failure" > auth.txt` | piping and redirection
+
+
+## Finding Files (find, plocate)
+| command | Description     |
+| :-------- | :------- | 
+|  LOCATE | locate is a symlink (shortcut) to plocate
+| `sudo updatedb` | updating the plocate db
+| finding file by name  |
+|  `locate filename`  | filename is expanded to *filename*
+|  `locate -i filename` | the filename is case insensitive
+| `locate -r '/filename$'`| finding by exact name
+| `locate -b filename` | finding using the basename 
+| `locate -r 'regex'` | finding using regular expressions
+| `locate -e filename` | checking that the file exists
+| `which command` or `which -a command` | showing command path
+| FIND | find path option
+| `find ~ -type f -size +1M` | finding all files in ~ bigger than 1 MB
+| Options: |
+| `-type f, d, l, s, p`|
+| `-name filename`|
+|`-iname filename`| case-insensitive
+|`-size n, +n, -n`|
+|`-perm permissions`|
+|`-links n, +n, -n`|
+|`-atime n, -mtime n, ctime n`|
+|`-group group_owner`|
+
+## Searching for text patterns (grep)
+| command | Description     |
+| :-------- | :------- | 
+|   `grep [OPTIONS] pattern file`|
+|Options: |
+|`-n`    | => print line number
+|`-i`    | => case insensitive
+|`-v`    | inverse the match
+|`-w`    | search for whole words
+|`-a`    | search in binary files
+|`-R`    | search in directory recursively
+|`-c`    | display only the no. of matches
+|`-C n`  |#display a context (n lines before and after the match)
+
+## VIM
+### Modes of operation: Command, Insert, and Last Line Modes.
+#### VIM Config File: ~/.vimrc
+| command | Description     |
+| :-------- | :------- | 
+|# Entering the Insert Mode from the Command Mode|
+|`i` | insert before the cursor
+|`I` | insert at the beginning of the line
+|`a` | insert after the cursor
+|`A` | insert at the end of the line
+|`o` | insert on the next line
+|# Entering the Last Line Mode from the Command Mode|
+|`:`|
+|Returning to Command Mode from Insert or Last Line Mode |
+| `ESC` |
+|Shortcuts in Last Line Mode|
+| `w!` | write/save the file
+| `q!` | quit the file without saving
+| `wq!`| save/write and quit
+| `e!` | undo to the last saved version of the file
+| `set nu` | set line numbers
+| `set nonu` | unset line numbers
+| `syntax on|off`|
+| `%s/search_string/replace_string/g`|
+| Shortcuts in Command Mode |
+|`x  ` | remove char under the cursor
+|`dd ` | cut the current line
+|`5dd` | cut 5 lines
+|`ZZ ` | save and quit
+|`u  ` | undo
+|`G  ` | move to the end of file
+|`$  ` | move to the end of line
+| `0 or ^`  | move to the beginning of file
+| `:n (Ex :10)` | move to line n
+| `Shift+v`     | select the current line
+| `y`           | yank/copy to clipboard
+| `p`          | paste after the cursor
+| `P`           | paste before the cursor
+| `/string`     | search for string forward
+| `?string`    | search for string backward
+| `n`           | next occurrence
+| `N`           | previous occurrence
+|`vim -o file1 file2`|Opening more files in stacked windows
+|`vim -d file1 file2` |Opening more files and highlighting the differences
+|`Ctrl+w` |move between files
