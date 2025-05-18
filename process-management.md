@@ -19,5 +19,6 @@
 |piping to less|
 `ps aux|less`
 | sorting by memory and piping to less|
+
 `ps aux --sort=%mem|less`
 `ps -ef|grep sshd`
