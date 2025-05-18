@@ -80,3 +80,44 @@ Example:
 |Check the configuration|
 |`ifconfig`|
 |`route -a`|
+
+## OpenSSH
+=============================
+| command | Description     |
+| :-------- | :------- | 
+|Installing OpenSSH (client and server)|
+|`sudo apt update && sudo apt install openssh-server openssh-client`| Ubuntu
+|`sudo dnf install openssh-server openssh-clients`| CentOS
+|connecting to the server|
+|`ssh -p 22 username@server_ip   `|  Ex: ssh -p 2267 john@192.168.0.100
+|`ssh -p 22 -l username server_ip`|
+|`ssh -v -p 22 username@server_ip`|  verbose
+|Controlling the SSHd daemon|
+|checking its status|
+|`sudo systemctl status ssh `   |Ubuntu
+|`sudo systemctl status sshd`   |CentOS
+|stopping the daemon|
+|`sudo systemctl stop ssh  `|Ubuntu
+|`sudo systemctl stop sshd `|CentOS
+|restarting the daemon|
+|`sudo systemctl restart ssh  `| Ubuntu
+|`sudo systemctl restart sshd `| CentOS
+|enabling at boot time|
+|`sudo systemctl enable ssh     `| Ubuntu
+|`sudo systemctl enable sshd    `| CentOS
+|`sudo systemctl is-enabled ssh `| Ubuntu
+|`sudo systemctl is-enabled sshd`|CentOS
+|Securing the SSHd daemon|
+|`Port 2278`|Change the port
+|`PermitRootLogin no`|Disable direct root login
+|`AllowUsers stud u1 u2 john`|Limit Users’ SSH access
+|`iptables`|Filter SSH access at the firewall level
+|Activate Public Key Authentication and Disable Password Authentication
+|Use only SSH Protocol version 2
+| Other configurations:|
+|`ClientAliveInterval 300
+ClientAliveCountMax 0
+MaxAuthTries 2
+MaxStartUps 3
+LoginGraceTime 20`|
+
