@@ -22,6 +22,6 @@
 |`alias rm="rm -i"`|
 
 ## Important alias ##
-# This may look a bit confusing, but essentially, 
-# it makes all of the other aliases you define function correctly when used with sudo 
+This may look a bit confusing, but essentially, 
+it makes all of the other aliases you define function correctly when used with sudo 
 `alias sudo='sudo '`  | use single quotes, not double quotes.
