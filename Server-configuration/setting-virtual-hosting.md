@@ -4,22 +4,23 @@ AWS Linux Server
 ==================================
 - `cd /etc/httd/conf.d`
 - `vim sixcolor.academy.conf`
-add below config
 
-<VirtualHost *:80>
-    ServerName sixcolor.academy
-    ServerAlias www.sixcolor.academy
-    DocumentRoot /var/www/sixcolor.academy
+##### add below config
 
-    ServerAdmin webmaster@sixcolor.academy
-    ErrorLog /var/log/httpd/sixcolor_academy_error.log
-    CustomLog /var/log/httpd/sixcolor_academy_access.log combined
+    <VirtualHost *:80>
+        ServerName sixcolor.academy
+        ServerAlias www.sixcolor.academy
+        DocumentRoot /var/www/sixcolor.academy
 
-RewriteEngine on
-RewriteCond %{SERVER_NAME} = sixcolor.academy [OR]
-RewriteCond %{SERVER_NAME} = www.sixcolor.academy
-RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} {END,NE,R=permanent}
-</VirtualHost>
+        ServerAdmin webmaster@sixcolor.academy
+        ErrorLog /var/log/httpd/sixcolor_academy_error.log
+        CustomLog /var/log/httpd/sixcolor_academy_access.log combined
+
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} = sixcolor.academy [OR]
+    RewriteCond %{SERVER_NAME} = www.sixcolor.academy
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} {END,NE,R=permanent}
+    </VirtualHost>
 
 - `sudo mkdir /var/www/sixcolor.academy`
 - `Add HTML Content in /var/www/sixcolor.academy/index.html`
